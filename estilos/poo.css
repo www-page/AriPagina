@@ -1,0 +1,185 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6ECEF;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4B5E6A;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.container {
+    display: flex;
+    max-width: 1280px;
+    margin: 1rem auto;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 1.5rem;
+    background-color: #D8E2E7;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    background-color: #4B5E6A;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 0.75rem;
+}
+
+.sidebar button:hover {
+    background-color: #3A4A55;
+    transform: translateY(-2px);
+}
+
+.sidebar button:focus {
+    outline: 2px solid #A8D5BA;
+    outline-offset: 2px;
+}
+
+.sidebar button.active {
+    background-color: #3A4A55;
+    font-weight: 600;
+    border-left: 4px solid #A8D5BA;
+}
+
+.content {
+    flex: 1;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    display: none;
+    padding: 1rem 0;
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    color: #4B5E6A;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid #A8D5BA;
+    padding-bottom: 0.25rem;
+}
+
+pre, .codevb {
+    background: #F7F9FA;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    background-color: #4B5E6A;
+    color: #E6ECEF;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .sidebar button {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    header {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    pre, .codevb {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    pre, .codevb {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 1rem;
+        align-self: flex-start;
+    }
+}

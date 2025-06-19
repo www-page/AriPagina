@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 5px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  }
+  h2 {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  #instructions {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+  }
+  #board-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  #board {
+    display: grid;
+    grid-template-columns: repeat(15, 32px);
+    grid-template-rows: repeat(15, 32px);
+    gap: 2px;
+    user-select: none;
+    cursor: pointer;
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #eee;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .cell.selected {
+    background: #ff9f1c;
+    color: #222;
+    font-weight: 800;
+    box-shadow: 0 0 8px #ff9f1c;
+  }
+  .cell.found {
+    background: #2ec4b6;
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 0 0 10px #2ec4b6;
+    cursor: default;
+  }
+  .cell.highlighted {
+    background: #ffbf69;
+  }
+  #word-list {
+    max-width: 250px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  #word-list h3 {
+    margin-top: 0;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  #word-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #word-list li {
+    margin: 7px 0;
+    padding-left: 8px;
+    position: relative;
+    transition: color 0.4s ease;
+  }
+  #word-list li.found {
+    color: #2ec4b6;
+    text-decoration: line-through;
+    font-weight: 700;
+  }
+  @media(max-width: 650px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    #board {
+      grid-template-columns: repeat(12, 28px);
+      grid-template-rows: repeat(12, 28px);
+      gap: 2px;
+    }
+    .cell {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 1rem;
+    }
+    #word-list {
+      max-width: 320px;
+      margin-top: 20px;
+    }
+  }

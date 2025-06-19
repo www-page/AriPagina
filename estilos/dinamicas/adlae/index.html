@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Juego de Inglés - Verbos en Past Perfect</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Poppins', sans-serif;
+    color: #1a237e;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2.8rem;
+  }
+  .game-container {
+    background: #ffffffcc;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+  }
+  .word-display {
+    letter-spacing: 12px;
+    font-size: 2.5rem;
+    margin: 20px 0 25px 0;
+    user-select: none;
+  }
+  .input-container {
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    border: 2px solid #4f83cc;
+    outline: none;
+    transition: border-color 0.3s;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+  }
+  input[type="text"]:focus {
+    border-color: #294ea0;
+  }
+  button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background: #294ea0;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background: #1b3567;
+  }
+  .message {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    min-height: 28px;
+  }
+  .scoreboard {
+    margin-top: 25px;
+    font-size: 1.15rem;
+  }
+  .hint {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+  <h1>Adivina el Verbo en Past Perfect</h1>
+  <div class="game-container">
+    <div class="hint" id="hint"></div>
+    <div class="word-display" id="displayWord"></div>
+    <div class="input-container">
+      <input type="text" id="letterInput" maxlength="1" autofocus autocomplete="off" spellcheck="false" />
+      <button id="guessBtn">Adivinar Letra</button>
+    </div>
+    <div class="message" id="message"></div>
+    <div class="scoreboard" id="scoreboard">Intentos restantes: 8</div>
+    <button id="newGameBtn" style="margin-top: 20px; display:none;">Nuevo Juego</button>
+  </div>
+
+<script>
+  const palabras = [
+    {word: "had eaten", hint: "Había comido."},
+    {word: "had gone", hint: "Había ido."},
+    {word: "had seen", hint: "Había visto."},
+    {word: "had done", hint: "Había hecho."},
+    {word: "had taken", hint: "Había tomado."},
+    {word: "had felt", hint: "Había sentido."},
+    {word: "had made", hint: "Había fabricado."},
+    {word: "had spoken", hint: "Había hablado."},
+    {word: "had written", hint: "Había escrito."},
+    {word: "had slept", hint: "Había dormido."}
+  ];
+
+  let palabraSeleccionada = "";
+  let letrasAdivinadas = [];
+  let intentosRestantes = 8;
+  let letrasIncorrectas = new Set();
+
+  const displayWordEl = document.getElementById("displayWord");
+  const letterInput = document.getElementById("letterInput");
+  const guessBtn = document.getElementById("guessBtn");
+  const messageEl = document.getElementById("message");
+  const scoreboardEl = document.getElementById("scoreboard");
+  const newGameBtn = document.getElementById("newGameBtn");
+  const hintEl = document.getElementById("hint");
+
+  function elegirPalabra() {
+    const index = Math.floor(Math.random() * palabras.length);
+    palabraSeleccionada = palabras[index].word.toLowerCase();
+    hintEl.textContent = "Pista: " + palabras[index].hint;
+  }
+
+  function mostrarPalabra() {
+    let display = "";
+    for (const letra of palabraSeleccionada){
+      if (letra === " ") {
+        display += "  ";
+      } else if (letrasAdivinadas.includes(letra)){
+        display += letra.toUpperCase() + " ";
+      } else {
+        display += "_ ";
+      }
+    }
+    displayWordEl.textContent = display.trim();
+  }
+
+  function actualizarScoreboard() {
+    scoreboardEl.textContent = `Intentos restantes: ${intentosRestantes}`;
+  }
+
+  function resetGame() {
+    intentosRestantes = 8;
+    letrasAdivinadas = [];
+    letrasIncorrectas.clear();
+    elegirPalabra();
+    mostrarPalabra();
+    actualizarScoreboard();
+    messageEl.textContent = "";
+    letterInput.value = "";
+    letterInput.disabled = false;
+    guessBtn.disabled = false;
+    newGameBtn.style.display = "none";
+    letterInput.focus();
+  }
+
+  function verificarVictoria() {
+    for(const letra of palabraSeleccionada){
+      if(letra !== " " && !letrasAdivinadas.includes(letra)){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  guessBtn.addEventListener("click", () => {
+    const letra = letterInput.value.toLowerCase();
+    letterInput.value = "";
+    if(!letra.match(/[a-z]/) || letra.length !== 1){
+      messageEl.textContent = "Por favor ingresa una letra válida.";
+      return;
+    }
+    if(letrasAdivinadas.includes(letra) || letrasIncorrectas.has(letra)){
+      messageEl.textContent = `Ya has intentado la letra '${letra.toUpperCase()}'. Prueba con otra.`;
+      return;
+    }
+    if(palabraSeleccionada.includes(letra)){
+      letrasAdivinadas.push(letra);
+      mostrarPalabra();
+      messageEl.textContent = `¡Muy bien! La letra '${letra.toUpperCase()}' está en la palabra.`;
+      if(verificarVictoria()){
+        messageEl.textContent = "¡Felicidades! Has adivinado la palabra completa.";
+        letterInput.disabled = true;
+        guessBtn.disabled = true;
+        newGameBtn.style.display = "inline-block";
+      }
+    } else {
+      letrasIncorrectas.add(letra);
+      intentosRestantes--;
+      actualizarScoreboard();
+      messageEl.textContent = `La letra '${letra.toUpperCase()}' no está en la palabra. Intenta otra.`;
+      if(intentosRestantes === 0){
+        messageEl.textContent = `¡Juego terminado! La palabra era "${palabraSeleccionada.toUpperCase()}".`;
+        mostrarPalabra();
+        letterInput.disabled = true;
+        guessBtn.disabled = true;
+        newGameBtn.style.display = "inline-block";
+      }
+    }
+    letterInput.focus();
+  });
+
+  newGameBtn.addEventListener("click", () => {
+    resetGame();
+  });
+
+  resetGame();
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Principal</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/style.css">
+  
+  <script>
+   function alternarMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('oculto');
+   }
+  </script>
+
+  <script>
+    function copyToClipboard() {
+      const text = "PASA080705MMCLSBA6@SOYCECYTEM.MX";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Correo copiado al portapapeles.");
+      }).catch(err => {
+        console.error("Error al copiar: ", err);
+      });
+    }
+  </script>
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/index.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+  <div class="container">
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=CECYTEM+CUAUTITLAN%2C+Paseos+del+Bosque+S%2FN+Lote+2%2C+Ex+Hacienda+Camino+a+Rancho+Xaltipa%2C+54850+Cuautitl%C3%A1n%2C+M%C3%A9x.&output=embed"
+        width="300"
+        height="280"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="text-container">
+      <h1>CECyTEM</h1>
+      <p>Plantel Cuautitlán</p>
+    </div>
+  </div>
+
+  <div class="contenedor-materias">
+    <button id="boton1" onclick="window.location.href='comunicacion.html'">
+      <p class="boton-texto-ct">Lengua y Comunicación 3</p>
+    </button>
+    <button id="boton2" onclick="window.location.href='humanidades.html'">
+      <p class="boton-texto-ct">Humanidades 2</p>
+    </button>
+    <button id="boton3" onclick="window.location.href='ecologia.html'">
+      <p class="boton-texto-ct">Ecología</p>
+    </button>
+    <button id="boton4" onclick="window.location.href='matematicas.html'">
+      <p class="boton-texto-ct">Matemáticas</p>
+    </button>
+    <button id="boton5" onclick="window.location.href='poo.html'">
+      <p class="boton-texto-ct">Poo</p>
+    </button>
+    <button id="boton6" onclick="window.location.href='poe.html'">
+      <p class="boton-texto-ct">Poe</p>
+    </button>
+    <button id="boton7" onclick="window.location.href='orientacion.html'">
+      <p class="boton-texto-ct">Orientación</p>
+    </button>
+    <button id="boton8" onclick="window.location.href='recursos.html'">
+      <p class="boton-texto-ct">Recursos Socioemocionales</p>
+    </button>
+    <button id="boton9" onclick="window.location.href='ingles.html'">
+      <p class="boton-texto-ct">Inglés</p>
+    </button>
+  </div>
+  
+  <div class="carrusel-contenedor">
+  <div class="carrusel">
+    <div class="carrusel-imagenes">
+      <div onclick="location.href=('dinamicas/sopaletraspoo/index.html')" class="carrusel-item" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('estilos/img/sopa.png'); background-size: cover; background-position: center;">
+        <p class="carrusel-texto">Sopa de letras</p>
+      </div>
+      <div onclick="location.href=('dinamicas/syes/index.html')" class="carrusel-item" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('estilos/img/sye.jpg'); background-size: cover; background-position: center;">
+        <p class="carrusel-texto">Serpientes y escaleras</p>
+      </div>
+      <div onclick="location.href=('dinamicas/grafica/index.html')" class="carrusel-item" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('estilos/img/grafi.jpg'); background-size: cover; background-position: center;">
+        <p class="carrusel-texto">Grafica</p>
+      </div>
+      <div onclick="location.href=('dinamicas/adlae/index.html')" class="carrusel-item" style="background-color: #8515ff;">
+        <p class="carrusel-texto">Adivina la palabra</p>
+      </div>
+      <div onclick="location.href=('dinamicas/i2cruci/index.html')" class="carrusel-item" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('estilos/img/cruci.jpg'); background-size: cover; background-position: center;">
+        <p class="carrusel-texto">Crucigrama</p>
+      </div>
+    </div>
+    <button class="carrusel-btn anterior"><i class="fas fa-chevron-left"></i></button>
+    <button class="carrusel-btn siguiente"><i class="fas fa-chevron-right"></i></button>
+    <div class="carrusel-indicadores"></div>
+  </div>
+</div>
+  
+  <script src="carrucel.js"></script>
+  
+  <div class="info-plantel">
+  <div class="info-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHmCFwEpbd0W1z21iKB2a7XL5ez4GEIJL3sr5qt9vZEJTDqxJZ0C4Aq8&s=10"
+      alt="Foto moderna y clara del Plantel CECyTEM Cuautitlán, edificio principal con áreas verdes y cielo azul"
+      class="info-plantel-img"
+    />
+  </div>
+  <div class="info-item">
+    <h2>Información del Plantel Cuautitlán</h2>
+    <p><strong>Director:</strong> M. Ed. Yovany Vergara Cortés</p>
+    <p><strong>Carreras:</strong> PROGRAMACIÓN</p>
+  </div>
+  <div class="info-item">
+    <p><strong>Contacto:</strong></p>
+    <ul class="contact-list">
+      <li>Teléfono: (55) 20 64 62 19</li>
+      <li>e-mail: <a href="mailto:plantel.cuautitlan@cecytem.mx">plantel.cuautitlan@cecytem.mx</a></li>
+    </ul>
+  </div>
+  <div class="info-item">
+    <p><strong>Datos:</strong></p>
+    <ul class="data-list">
+      <li>Alumnos: 543</li>
+      <li>Edificios: 3</li>
+      <li>Aulas: 13</li>
+      <li>Laboratorios: 3</li>
+      <li>Áreas administrativas: Sí</li>
+      <li>Talleres y salas de cómputo: 2</li>
+      <li>Áreas deportivas: 2</li>
+      <li>Equipo con que se cuenta: 165</li>
+      <li>Bibliotecas: 1 (413 volúmenes)</li>
+      <li>Cafeterías: 1</li>
+    </ul>
+  </div>
+</div>
+  
+</body>
+</html>

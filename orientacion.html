@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientación</title>
+    <link rel="stylesheet" href="estilos/orientacion.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Orientación</h1>
+        <p>Un curso para desarrollar habilidades personales, vocacionales y sociales en el segundo año de bachillerato.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block;">
+                <h2>Primer Parcial</h2>
+                <h3>1. Autoconocimiento</h3>
+                <p>El autoconocimiento implica identificar fortalezas, debilidades, valores e intereses personales.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Realiza un test de intereses vocacionales y escribe un párrafo sobre tus resultados.</p>
+
+                <h3>2. Toma de Decisiones</h3>
+                <p>La toma de decisiones requiere evaluar opciones, considerar consecuencias y elegir responsablemente.</p>
+                <h4>Ejemplo: Escenario</h4>
+                <p>Decide entre estudiar una carrera técnica o una universitaria. Lista pros y contras.</p>
+
+                <h3>3. Proyecto de Vida</h3>
+                <p>Un proyecto de vida es un plan personal que incluye metas a corto, mediano y largo plazo.</p>
+                <h4>Ejemplo: Esquema</h4>
+                <p>Dibuja una línea de tiempo con tus metas para los próximos 5 años.</p>
+
+                <h3>4. Habilidades de Estudio</h3>
+                <p>Técnicas como resúmenes, mapas mentales y gestión del tiempo mejoran el aprendizaje.</p>
+                <h4>Ejemplo: Mapa Mental</h4>
+                <p>Crea un mapa mental sobre un tema de tu interés académico.</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none;">
+                <h2>Segundo Parcial</h2>
+                <h3>1. Vocación y Profesión</h3>
+                <p>La vocación combina intereses y habilidades para elegir una carrera profesional adecuada.</p>
+                <h4>Ejemplo: Investigación</h4>
+                <p>Investiga una carrera de tu interés: requisitos, campo laboral y oportunidades.</p>
+
+                <h3>2. Comunicación Asertiva</h3>
+                <p>La comunicación asertiva expresa ideas y emociones de forma clara y respetuosa.</p>
+                <h4>Ejemplo: Role-Play</h4>
+                <p>Practica un diálogo asertivo resolviendo un conflicto con un amigo.</p>
+
+                <h3>3. Trabajo en Equipo</h3>
+                <p>El trabajo en equipo fomenta la colaboración, el respeto y la resolución de problemas conjunta.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Organiza un proyecto grupal en clase y define roles para cada miembro.</p>
+
+                <h3>4. Resolución de Conflictos</h3>
+                <p>Estrategias como la negociación y la empatía ayudan a resolver conflictos de manera constructiva.</p>
+                <h4>Ejemplo: Caso</h4>
+                <p>Propón una solución a un desacuerdo entre compañeros sobre un proyecto escolar.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none;">
+                <h2>Tercer Parcial</h2>
+                <h3>1. Inteligencia Emocional</h3>
+                <p>La inteligencia emocional incluye reconocer y gestionar emociones propias y ajenas.</p>
+                <h4>Ejemplo: Reflexión</h4>
+                <p>Escribe cómo manejaste una situación de estrés y qué aprendiste.</p>
+
+                <h3>2. Valores Éticos</h3>
+                <p>Los valores como la honestidad, el respeto y la responsabilidad guían las decisiones personales.</p>
+                <h4>Ejemplo: Dilema</h4>
+                <p>Analiza un dilema ético: ¿copiar en un examen o estudiar más?</p>
+
+                <h3>3. Liderazgo</h3>
+                <p>El liderazgo implica motivar, organizar y guiar a otros hacia un objetivo común.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Lidera una actividad en clase y reflexiona sobre tu estilo de liderazgo.</p>
+
+                <h3>4. Planificación Vocacional</h3>
+                <p>La planificación vocacional ayuda a trazar un camino hacia la carrera deseada, considerando estudios y experiencia.</p>
+                <h4>Ejemplo: Plan</h4>
+                <p>Elabora un plan de estudios para la carrera que te interesa.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Orientación. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

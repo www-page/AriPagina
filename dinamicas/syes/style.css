@@ -1,0 +1,199 @@
+ /* No mover */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    :root {
+      --green: #2e7d32;
+      --blue: #0277bd;
+      --board-bg: #a5d6a7;
+      --snake-color: #1b5e20;
+      --ladder-color: #01579b;
+      --player1-color: #43a047;
+      --player2-color: #0288d1;
+      --square-size: 64px;
+      --gap: 8px;
+      --border-radius: 12px;
+      --shadow-color: rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 32px 16px;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 2px 6px var(--shadow-color);
+    }
+
+    #game-container {
+      background: var(--board-bg);
+      border-radius: var(--border-radius);
+      padding: var(--gap);
+      box-shadow: 0 10px 20px var(--shadow-color);
+      max-width: calc(var(--square-size) * 5 + var(--gap) * 6);
+      user-select: none;
+      width: 100vw;
+      max-width: 360px;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, var(--square-size));
+      grid-template-rows: repeat(5, var(--square-size));
+      gap: var(--gap);
+    }
+
+    .square {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 4px var(--shadow-color);
+      position: relative;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 6px;
+      user-select: none;
+    }
+
+    /* Board numbering style top-left */
+    .square-number {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green);
+      user-select: none;
+    }
+
+    /* Snakes and ladders indicators */
+    .snake {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 24px;
+      height: 24px;
+      stroke: var(--snake-color);
+      fill: var(--snake-color);
+      opacity: 0.8;
+      user-select: none;
+    }
+
+    .ladder {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 24px;
+      height: 24px;
+      stroke: var(--ladder-color);
+      fill: var(--ladder-color);
+      opacity: 0.8;
+      user-select: none;
+    }
+
+    /* Player tokens container inside square */
+    .tokens {
+      display: flex;
+      gap: 6px;
+      margin-top: auto;
+      user-select: none;
+    }
+
+    /* Player token style - fixed size */
+    .player-token {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    /* Player 1 - Green */
+    .player1 {
+      background-color: var(--player1-color);
+    }
+
+    /* Player 2 - Blue */
+    .player2 {
+      background-color: var(--player2-color);
+    }
+
+    /* Control panel and info */
+    #controls {
+      margin-top: 24px;
+      background: rgba(255 255 255 / 0.15);
+      padding: 16px 24px;
+      border-radius: var(--border-radius);
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 4px 10px var(--shadow-color);
+    }
+
+    #dice-result {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: white;
+      user-select: none;
+    }
+
+    #turn-info {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: white;
+      user-select: none;
+      text-align: center;
+    }
+
+    #roll-button {
+      display: block;
+      margin: 0 auto;
+      background: var(--green);
+      border: none;
+      border-radius: 20px;
+      padding: 12px 32px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s ease;
+      user-select: none;
+    }
+
+    #roll-button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      color: #666;
+    }
+
+    #roll-button:hover:not(:disabled) {
+      background: var(--blue);
+    }
+
+    /* Responsive scaling */
+    @media (max-width: 400px) {
+      :root {
+        --square-size: 56px;
+      }
+      #game-container {
+        max-width: calc(var(--square-size) * 5 + var(--gap) * 6);
+      }
+    }

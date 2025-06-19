@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Socioemocionales</title>
+    <link rel="stylesheet" href="estilos/recursos.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Recursos Socioemocionales</h1>
+        <p>Un curso para desarrollar habilidades emocionales y sociales que promuevan el bienestar personal y colectivo.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block;">
+                <h2>Primer Parcial</h2>
+                <h3>1. Autoregulación Emocional</h3>
+                <p>La autorregulación implica identificar y controlar emociones como el enojo o la tristeza.</p>
+                <h4>Ejemplo: Técnica</h4>
+                <p>Practica la respiración profunda: inhala por 4 segundos, retén por 4, exhala por 4.</p>
+
+                <h3>2. Empatía</h3>
+                <p>La empatía es comprender y compartir los sentimientos de otros, fortaleciendo las relaciones.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Escucha activamente a un compañero y resume sus sentimientos sin juzgar.</p>
+
+                <h3>3. Resiliencia</h3>
+                <p>La resiliencia es la capacidad de adaptarse y superar adversidades, como fracasos o pérdidas.</p>
+                <h4>Ejemplo: Reflexión</h4>
+                <p>Escribe sobre una dificultad que superaste y qué aprendiste.</p>
+
+                <h3>4. Autoconcepto</h3>
+                <p>El autoconcepto es la percepción que tienes de ti mismo, influida por experiencias y retroalimentación.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Lista cinco cualidades positivas sobre ti y cómo las demuestras.</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none;">
+                <h2>Segundo Parcial</h2>
+                <h3>1. Comunicación Efectiva</h3>
+                <p>La comunicación efectiva implica expresar ideas claramente y escuchar con atención.</p>
+                <h4>Ejemplo: Role-Play</h4>
+                <p>Practica un diálogo donde expreses una necesidad de manera respetuosa.</p>
+
+                <h3>2. Manejo del Estrés</h3>
+                <p>Estrategias como la meditación, el ejercicio y la organización ayudan a reducir el estrés.</p>
+                <h4>Ejemplo: Técnica</h4>
+                <p>Prueba una meditación guiada de 5 minutos y reflexiona sobre cómo te sientes.</p>
+
+                <h3>3. Resolución de Conflictos</h3>
+                <p>Resolver conflictos requiere escuchar, negociar y buscar soluciones justas.</p>
+                <h4>Ejemplo: Caso</h4>
+                <p>Propón una solución a un desacuerdo con un amigo sobre planes de fin de semana.</p>
+
+                <h3>4. Trabajo en Equipo</h3>
+                <p>El trabajo en equipo fomenta la colaboración y el respeto por las ideas de otros.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Participa en un proyecto grupal y reflexiona sobre tu contribución.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none;">
+                <h2>Tercer Parcial</h2>
+                <h3>1. Asertividad</h3>
+                <p>La asertividad es expresar tus necesidades y opiniones respetando a los demás.</p>
+                <h4>Ejemplo: Escenario</h4>
+                <p>Practica decir “no” a una solicitud sin sentir culpa, explicando tu razón.</p>
+
+                <h3>2. Inteligencia Emocional</h3>
+                <p>La inteligencia emocional incluye autoconciencia, autorregulación, empatía y habilidades sociales.</p>
+                <h4>Ejemplo: Reflexión</h4>
+                <p>Escribe cómo manejaste una emoción fuerte recientemente.</p>
+
+                <h3>3. Autoestima</h3>
+                <p>La autoestima es el valor que te das a ti mismo, influido por logros y relaciones.</p>
+                <h4>Ejemplo: Actividad</h4>
+                <p>Crea un diario de gratitud con tres cosas positivas diarias durante una semana.</p>
+
+                <h3>4. Manejo de Relaciones</h3>
+                <p>Las relaciones saludables se basan en respeto, confianza y comunicación abierta.</p>
+                <h4>Ejemplo: Análisis</h4>
+                <p>Evalúa una relación importante en tu vida y sugiere cómo fortalecerla.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Recursos Socioemocionales. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

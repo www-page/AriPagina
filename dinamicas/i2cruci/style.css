@@ -1,0 +1,121 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 24px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  /* Crossword grid container */
+  .crossword-container {
+    flex: 1 1 320px;
+    max-width: 400px;
+  }
+
+  table.crossword {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  table.crossword td {
+    border: 2px solid black;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    background-color: #fff;
+  }
+  table.crossword td.block {
+    background-color: black;
+    border-color: black;
+  }
+
+  /* Numbering clue in cell top-left corner */
+  table.crossword td .cell-number {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  /* Input fields */
+  table.crossword input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    cursor: text;
+    user-select: text;
+    padding: 0;
+    margin: 0;
+  }
+  table.crossword input:focus {
+    outline: 2px solid black;
+    outline-offset: -2px;
+  }
+
+  /* Clues container */
+  .clues-container {
+    flex: 1 1 450px;
+    max-width: 500px;
+  }
+
+  .clues-container h2 {
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+  }
+
+  .clues-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .clues-list li {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .clues-list li span.clue-number {
+    font-weight: 700;
+    margin-right: 8px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 720px) {
+    main {
+      flex-direction: column;
+      padding: 0 12px;
+    }
+    .crossword-container, .clues-container {
+      max-width: 100%;
+      flex: unset;
+    }
+  }

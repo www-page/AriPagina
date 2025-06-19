@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecología</title>
+    <link rel="stylesheet" href="estilos/ecologia.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Ecología</h1>
+        <p>Un curso para entender los ecosistemas, la conservación ambiental, el impacto humano en el medio ambiente y la importancia de la sostenibilidad para el futuro del planeta.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block;">
+                <h2>Primer Parcial</h2>
+                <h3>1. Conceptos Básicos de Ecología</h3>
+                <p>La ecología es la ciencia que estudia las interacciones entre los organismos vivos y su entorno, incluyendo factores bióticos (seres vivos) y abióticos (como agua, aire y luz solar). Conceptos fundamentales incluyen el ecosistema, que es una comunidad de organismos interactuando con su ambiente físico; el hábitat, el lugar donde vive una especie; el nicho ecológico, el rol de una especie en su ecosistema; y la biodiversidad, la variedad de vida que sustenta la resiliencia de los ecosistemas. Estos conceptos son esenciales para entender cómo los sistemas naturales mantienen el equilibrio y cómo las perturbaciones pueden afectarlos.</p>
+                <img src="https://images.unsplash.com/photo-1501854140801-7ae4b8ae9a6e" alt="Ecosistema forestal con árboles y vida silvestre">
+                <h4>Ejemplo: Ecosistema</h4>
+                <p>Describe los componentes de un ecosistema forestal: árboles (productores), ciervos (consumidores primarios), lobos (consumidores secundarios) y hongos (descomponedores). Analiza cómo estos elementos interactúan para mantener el equilibrio ecológico.</p>
+
+                <h3>2. Cadenas y Redes Tróficas</h3>
+                <p>Las cadenas tróficas ilustran el flujo de energía y nutrientes entre organismos en un ecosistema, comenzando con productores (plantas que realizan fotosíntesis), seguidos por consumidores primarios (herbívoros), secundarios (carnívoros) y terciarios (depredadores tope), y terminando con descomponedores (hongos y bacterias). Las redes tróficas, más complejas, muestran múltiples cadenas interconectadas, reflejando la diversidad de interacciones en un ecosistema. Estas estructuras son cruciales para comprender cómo la energía se transfiere y cómo la pérdida de una especie puede desencadenar efectos en cascada.</p>
+                <img src="https://images.pexels.com/photos/11542598/pexels-photo-11542598.jpeg" alt="Ecosistema natural ilustrando cadenas tróficas">
+                <h4>Ejemplo: Cadena Trófica</h4>
+                <p>Hierba → Conejo → Halcón. Dibuja una red trófica que incluya más organismos, como insectos, aves pequeñas y descomponedores, y explica cómo un cambio en una población afecta a las demás.</p>
+
+                <h3>3. Ciclos Biogeoquímicos</h3>
+                <p>Los ciclos biogeoquímicos describen cómo elementos esenciales como el carbono, el agua y el nitrógeno circulan entre los componentes bióticos y abióticos de la Tierra. Por ejemplo, el ciclo del agua incluye evaporación (de océanos a la atmósfera), condensación (formación de nubes), precipitación (lluvia o nieve) y escorrentía (retorno al suelo o cuerpos de agua). El ciclo del carbono regula el CO₂ a través de la fotosíntesis, la respiración y la descomposición, mientras que el ciclo del nitrógeno asegura la disponibilidad de nutrientes para las plantas. Estos procesos son vitales para mantener la vida y el equilibrio ambiental.</p>
+                <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc" alt="Lago y nubes representando el ciclo del agua">
+                <h4>Ejemplo: Ciclo del Agua</h4>
+                <p>Explica las etapas del ciclo del agua: evaporación, condensación, precipitación y escorrentía. Investiga cómo la urbanización puede alterar este ciclo en tu región.</p>
+
+                <h3>4. Biodiversidad</h3>
+                <p>La biodiversidad abarca la variedad de especies, genes y ecosistemas en la Tierra, siendo un pilar fundamental para la estabilidad y resiliencia de los ecosistemas. Una alta biodiversidad permite a los ecosistemas adaptarse a cambios, como desastres naturales o alteraciones climáticas, y proporciona servicios esenciales como polinización, purificación del agua y regulación del clima. La pérdida de biodiversidad, causada por actividades humanas como la deforestación o la contaminación, amenaza estos servicios y pone en riesgo la supervivencia de muchas especies, incluidas las humanas.</p>
+                <img src="https://images.pexels.com/photos/566747/pexels-photo-566747.jpeg" alt="Diversidad de fauna y flora en un ecosistema">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Investiga una especie en peligro de extinción en tu país, como el jaguar o el cóndor, y propone tres medidas de conservación, considerando hábitat, caza y educación comunitaria.</p>
+
+                <h3>5. Poblaciones y Comunidades</h3>
+                <p>Una población es un grupo de individuos de la misma especie que viven en un área específica, mientras que una comunidad incluye todas las poblaciones que interactúan en un ecosistema. Las poblaciones se caracterizan por su tamaño, densidad y distribución, y su dinámica depende de factores como la natalidad, mortalidad y migración. Las comunidades se forman por interacciones como la competencia, la depredación y el mutualismo, que determinan la estructura y funcionamiento del ecosistema.</p>
+                <img src="https://images.unsplash.com/photo-1564342969479-8f8f69376080" alt="Grupo de animales en un ecosistema representando poblaciones">
+                <h4>Ejemplo: Interacciones</h4>
+                <p>Identifica un ejemplo de mutualismo en un ecosistema (por ejemplo, abejas y flores) y explica cómo beneficia a ambas especies.</p>
+
+                <h3>6. Sucesión Ecológica</h3>
+                <p>La sucesión ecológica es el proceso gradual por el cual una comunidad biológica cambia con el tiempo, ya sea tras una perturbación (sucesión secundaria) o en un área sin vida previa (sucesión primaria). Por ejemplo, tras un incendio forestal, hierbas pioneras colonizan el área, seguidas por arbustos y finalmente árboles maduros. Este proceso restaura la biodiversidad y la complejidad del ecosistema, siendo clave para entender la recuperación natural.</p>
+                <img src="https://images.pexels.com/photos/60013/pexels-photo-60013.jpeg" alt="Paisaje en recuperación tras un incendio forestal">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Investiga un caso de sucesión secundaria en tu región (por ejemplo, un área quemada o abandonada) y describe las etapas de recuperación observadas.</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none;">
+                <h2>Segundo Parcial</h2>
+                <h3>1. Ecosistemas Terrestres</h3>
+                <p>Los ecosistemas terrestres, como bosques, desiertos, praderas y tundras, varían según el clima, el suelo y la vegetación. Por ejemplo, los bosques tropicales tienen alta biodiversidad y capas diferenciadas (emergente, dosel, sotobosque, suelo), mientras que los desiertos presentan adaptaciones extremas, como cactus que almacenan agua. Estos ecosistemas proporcionan servicios vitales, como la captura de carbono y la regulación del clima, pero están amenazados por actividades humanas.</p>
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Bosque tropical con vegetación densa y biodiversidad">
+                <h4>Ejemplo: Bosque Tropical</h4>
+                <p>Describe las capas de un bosque tropical (emergente, dosel, sotobosque, suelo) y menciona dos especies adaptadas a cada capa, explicando sus roles ecológicos.</p>
+
+                <h3>2. Impacto Humano</h3>
+                <p>Las actividades humanas, como la deforestación, la contaminación, la urbanización y la agricultura intensiva, alteran los ecosistemas al destruir hábitats, reducir la biodiversidad y modificar los ciclos biogeoquímicos. Por ejemplo, la deforestación en el Amazonas libera carbono almacenado, contribuye al cambio climático y desplaza comunidades indígenas. Mitigar estos impactos requiere políticas sostenibles y cambios en los patrones de consumo global.</p>
+                <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg" alt="Zona deforestada mostrando impacto humano en el medio ambiente">
+                <h4>Ejemplo: Deforestación</h4>
+                <p>Analiza los efectos de la deforestación en el Amazonas en el clima global y propone dos soluciones, como reforestación o regulaciones internacionales.</p>
+
+                <h3>3. Conservación Ambiental</h3>
+                <p>La conservación ambiental busca proteger los ecosistemas y la biodiversidad mediante estrategias como áreas protegidas (parques nacionales, reservas), restauración ecológica y manejo sostenible de recursos. Estas iniciativas preservan servicios ecosistémicos, como la polinización y la purificación del agua, y fomentan la coexistencia entre humanos y naturaleza. Organizaciones globales y locales trabajan para restaurar hábitats degradados y proteger especies en peligro.</p>
+                <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7b" alt="Parque nacional con fauna y flora protegida">
+                <h4>Ejemplo: Áreas Protegidas</h4>
+                <p>Investiga un parque nacional en tu país, como el Parque Nacional Yasuní, y describe su rol en la conservación de especies y la educación ambiental.</p>
+
+                <h3>4. Cambio Climático</h3>
+                <p>El cambio climático, impulsado por emisiones de gases de efecto invernadero como el CO₂ y el metano, provoca alteraciones en el clima global, como aumento de temperaturas, deshielo de glaciares y eventos climáticos extremos. Estos cambios afectan los ecosistemas, desplazan especies y amenazan la seguridad alimentaria. Acciones como reducir emisiones, usar energías renovables y promover la reforestación son esenciales para mitigar sus efectos.</p>
+                <img src="https://images.pexels.com/photos/4397796/pexels-photo-4397796.jpeg" alt="Glaciar derritiéndose debido al cambio climático">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Calcula tu huella de carbono usando una calculadora en línea y propone tres acciones personales para reducirla, como usar transporte público o reducir el consumo de carne.</p>
+
+                <h3>5. Contaminación Ambiental</h3>
+                <p>La contaminación, en sus formas química (pesticidas, plásticos), atmosférica (smog, gases) y acuática (vertidos industriales), daña los ecosistemas y la salud humana. Por ejemplo, los microplásticos en océanos afectan la vida marina, mientras que la contaminación atmosférica contribuye al cambio climático. Combatir la contaminación requiere regulaciones estrictas, tecnologías limpias y cambios en los hábitos de consumo.</p>
+                <img src="https://images.pexels.com/photos/2058128/pexels-photo-2058128.jpeg" alt="Agua contaminada con plásticos afectando un ecosistema">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Investiga los efectos de los microplásticos en la vida marina y diseña una campaña escolar para reducir el uso de plásticos de un solo uso.</p>
+
+                <h3>6. Agricultura Sostenible</h3>
+                <p>La agricultura sostenible promueve prácticas que minimizan el impacto ambiental, como el uso de cultivos orgánicos, rotación de cultivos y agroecología. Estas técnicas preservan la fertilidad del suelo, reducen el uso de químicos y apoyan la seguridad alimentaria. En contraste, la agricultura intensiva puede agotar recursos y degradar ecosistemas, haciendo esencial un enfoque equilibrado.</p>
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d6942a3" alt="Campo de agricultura sostenible con cultivos orgánicos">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Compara la agricultura convencional con la orgánica en términos de impacto ambiental y propone un plan para un huerto escolar sostenible.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none;">
+                <h2>Tercer Parcial</h2>
+                <h3>1. Ecosistemas Acuáticos</h3>
+                <p>Los ecosistemas acuáticos, que incluyen océanos, ríos, lagos y humedales, albergan una gran biodiversidad y proporcionan servicios como la regulación del clima y la producción de alimentos. Los arrecifes de coral, por ejemplo, son “bosques marinos” que sostienen miles de especies, pero enfrentan amenazas como el blanqueamiento por aumento de temperaturas. Los ecosistemas de agua dulce, como ríos, son vitales para el suministro de agua potable y la agricultura.</p>
+                <img src="https://images.unsplash.com/photo-1591027765599-6d181606deae" alt="Arrecife de coral vibrante en un ecosistema marino">
+                <h4>Ejemplo: Arrecifes de Coral</h4>
+                <p>Explica la importancia de los arrecifes de coral para la biodiversidad marina y analiza tres amenazas principales, como el cambio climático y la pesca excesiva.</p>
+
+                <h3>2. Recursos Naturales</h3>
+                <p>Los recursos naturales, como el agua, el suelo, los minerales y los bosques, son fundamentales para la vida, pero su explotación excesiva amenaza la sostenibilidad. Por ejemplo, el agua dulce es un recurso limitado, y su mal uso en la agricultura o la industria puede generar escasez. La gestión sostenible implica prácticas como la reforestación, el reciclaje y la conservación del suelo para garantizar su disponibilidad para futuras generaciones.</p>
+                <img src="https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg" alt="Río limpio representando la conservación de recursos hídricos">
+                <h4>Ejemplo: Agua</h4>
+                <p>Propón tres medidas para conservar el agua en tu comunidad, como recolectar agua de lluvia o promover campañas de concienciación.</p>
+
+                <h3>3. Energías Renovables</h3>
+                <p>Las energías renovables, como la solar, eólica e hidroeléctrica, ofrecen alternativas sostenibles a los combustibles fósiles, reduciendo las emisiones de gases de efecto invernadero y el impacto ambiental. Los paneles solares, por ejemplo, convierten la luz solar en electricidad sin generar residuos, mientras que la energía eólica aprovecha el viento para generar energía limpia. La adopción de estas tecnologías es clave para combatir el cambio climático.</p>
+                <img src="https://images.unsplash.com/photo-1509395176047-4f571d7e5591" alt="Paneles solares en un campo bajo el sol">
+                <h4>Ejemplo: Energía Solar</h4>
+                <p>Investiga cómo funcionan los paneles solares, describe sus beneficios ambientales y económicos, y analiza su viabilidad en tu región.</p>
+
+                <h3>4. Educación Ambiental</h3>
+                <p>La educación ambiental fomenta la conciencia sobre la conservación, el uso sostenible de recursos y la protección de los ecosistemas. A través de campañas, talleres y programas escolares, se promueve un cambio de comportamiento hacia prácticas más responsables, como el reciclaje, la reducción de residuos y la participación comunitaria. Este enfoque empodera a las personas para tomar decisiones informadas y contribuir al desarrollo sostenible.</p>
+                <img src="https://images.pexels.com/photos/5473398/pexels-photo-5473398.jpeg" alt="Cartel educativo promoviendo el reciclaje en una escuela">
+                <h4>Ejemplo: Campaña</h4>
+                <p>Diseña un póster para promover el reciclaje en tu escuela, incluyendo mensajes clave y un diseño atractivo para captar la atención de los estudiantes.</p>
+
+                <h3>5. Servicios Ecosistémicos</h3>
+                <p>Los servicios ecosistémicos son los beneficios que los ecosistemas proporcionan a los humanos, como la polinización de cultivos por insectos, la purificación del agua por humedales y la regulación del clima por bosques. Estos servicios son esenciales para la agricultura, la salud y la economía, pero están amenazados por la degradación ambiental. Proteger los ecosistemas es crucial para mantener estos beneficios.</p>
+                <img src="https://images.unsplash.com/photo-1517502881942-4718478cd058" alt="Humedal con vegetación que purifica el agua">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Identifica un servicio ecosistémico en tu región (por ejemplo, polinización en cultivos locales) y explica cómo su pérdida afectaría a la comunidad.</p>
+
+                <h3>6. Biotecnología Ambiental</h3>
+                <p>La biotecnología ambiental utiliza organismos vivos, como bacterias o plantas, para resolver problemas ambientales, como la biorremediación de suelos contaminados o el tratamiento de aguas residuales. Estas tecnologías ofrecen soluciones innovadoras para restaurar ecosistemas y reducir la contaminación, pero requieren un uso ético para evitar impactos negativos en la biodiversidad.</p>
+                <img src="https://images.pexels.com/photos/3825571/pexels-photo-3825571.jpeg" alt="Planta creciendo en suelo restaurado por biorremediación">
+                <h4>Ejemplo: Actividad</h4>
+                <p>Investiga un caso de biorremediación, como el uso de microorganismos para limpiar derrames de petróleo, y explica sus beneficios y limitaciones.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Ecología. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

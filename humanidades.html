@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanidades 2</title>
+    <link rel="stylesheet" href="estilos/humanidades.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Humanidades 2</h1>
+        <p>Un curso que explora la historia, la filosofía, el arte y la cultura para comprender el desarrollo humano.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block;">
+                <h2>Primer Parcial</h2>
+                <h3>1. Civilizaciones Antiguas</h3>
+                <p>Estudio de las primeras civilizaciones, como Mesopotamia, Egipto y Grecia, destacando sus aportes culturales, políticos y sociales.</p>
+                <h4>Ejemplo: Egipto</h4>
+                <p>Analiza la importancia de las pirámides como símbolos de poder y organización social.</p>
+
+                <h3>2. Filosofía Clásica</h3>
+                <p>Introducción a pensadores como Sócrates, Platón y Aristóteles, quienes sentaron las bases de la ética, la política y la lógica.</p>
+                <h4>Ejemplo: El Mito de la Caverna</h4>
+                <p>Lee y discute el “Mito de la Caverna” de Platón, reflexionando sobre la percepción y la realidad.</p>
+
+                <h3>3. Arte en la Antigüedad</h3>
+                <p>Exploración de expresiones artísticas en civilizaciones antiguas, como la escultura griega y la pintura egipcia.</p>
+                <h4>Ejemplo: Análisis</h4>
+                <p>Compara una escultura griega (como el Discóbolo) con una pintura mural egipcia.</p>
+
+                <h3>4. Religión y Mitología</h3>
+                <p>Estudio de las creencias religiosas y mitológicas en culturas antiguas, como los dioses griegos y egipcios.</p>
+                <h4>Ejemplo: Mitología Griega</h4>
+                <p>Resume el mito de Prometeo y discute su significado sobre la humanidad.</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none;">
+                <h2>Segundo Parcial</h2>
+                <h3>1. Edad Media</h3>
+                <p>Estudio del feudalismo, la iglesia y las cruzadas, y su impacto en la sociedad europea.</p>
+                <h4>Ejemplo: Feudalismo</h4>
+                <p>Dibuja un esquema del sistema feudal, indicando roles como rey, noble y campesino.</p>
+
+                <h3>2. Filosofía Medieval</h3>
+                <p>Análisis de pensadores como San Agustín y Santo Tomás de Aquino, que integraron fe y razón.</p>
+                <h4>Ejemplo: Debate</h4>
+                <p>Compara las ideas de San Agustín sobre el libre albedrío con las de un filósofo moderno.</p>
+
+                <h3>3. Arte Gótico</h3>
+                <p>Exploración del arte gótico, caracterizado por catedrales con arcos ojivales y vitrales.</p>
+                <h4>Ejemplo: Catedral</h4>
+                <p>Analiza la estructura de la Catedral de Notre-Dame y su simbolismo religioso.</p>
+
+                <h3>4. Literatura Medieval</h3>
+                <p>Estudio de obras como “El Cantar de Mío Cid” o “Las mil y una noches”, que reflejan valores de la época.</p>
+                <h4>Ejemplo: Análisis</h4>
+                <p>Lee un fragmento de “El Cantar de Mío Cid” y discute el papel del héroe épico.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none;">
+                <h2>Tercer Parcial</h2>
+                <h3>1. Renacimiento</h3>
+                <p>El Renacimiento marcó un renacer cultural, con avances en arte, ciencia y humanismo.</p>
+                <h4>Ejemplo: Humanismo</h4>
+                <p>Explica cómo el humanismo influyó en obras como “El Príncipe” de Maquiavelo.</p>
+
+                <h3>2. Arte Renacentista</h3>
+                <p>Estudio de artistas como Leonardo da Vinci y Miguel Ángel, y técnicas como la perspectiva.</p>
+                <h4>Ejemplo: Análisis</h4>
+                <p>Compara “La Última Cena” de Da Vinci con una obra moderna.</p>
+
+                <h3>3. Reforma y Contrarreforma</h3>
+                <p>Análisis de los cambios religiosos en Europa, liderados por Lutero y la respuesta católica.</p>
+                <h4>Ejemplo: Debate</h4>
+                <p>Discute los efectos de la Reforma en la política europea.</p>
+
+                <h3>4. Literatura Renacentista</h3>
+                <p>Exploración de obras como “Don Quijote” de Cervantes, que reflejan el espíritu renacentista.</p>
+                <h4>Ejemplo: Análisis</h4>
+                <p>Lee un capítulo de “Don Quijote” y analiza el uso de la sátira.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Humanidades. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

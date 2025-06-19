@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juego de Serpientes y Escaleras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='../../comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='../../ecologia.html'">Ecologia</button>
+                <button onclick="location.href='../../humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='../../matematicas.html'">Matematicas</button>
+                <button onclick="location.href='../../orientacion.html'">Orientación</button>
+                <button onclick="location.href='../../poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='../../poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='../../recursos.html'">Recursos</button>
+                <button onclick="location.href='../../index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='../adlae/index.html'">Verbos</button>
+                <button onclick="location.href='../grafica/index.html'">Grafica</button>
+                <button onclick="location.href='../i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='../syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='../sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+  <h1>Serpientes y Escaleras</h1>
+  <div id="game-container" role="main" aria-label="Tablero de juego Serpientes y Escaleras">
+    <div id="board" aria-live="polite" aria-relevant="additions removals"></div>
+
+    <div id="controls" aria-label="Controles del juego">
+      <div id="turn-info" aria-live="polite">Turno: Jugador 1 (Verde)</div>
+      <div id="dice-result" aria-live="polite">Lanzamiento: -</div>
+      <button id="roll-button" aria-label="Lanzar dado">Lanzar dado</button>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
+

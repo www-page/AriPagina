@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Orientada a Objetos</title>
+    <link rel="stylesheet" href="estilos/poo.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Programación Orientada a Objetos</h1>
+        <p>Un curso introductorio sobre los fundamentos de la programación orientada a objetos y sus aplicaciones prácticas.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section active" id="primer">
+                <h2>Primer Parcial</h2>
+                <h3>Modelo Espiral</h3>
+                <p style="line-height: 1.6;">El modelo espiral es un enfoque de desarrollo de software que combina elementos del modelo en cascada y el desarrollo iterativo. Es particularmente útil para proyectos grandes y complejos donde los riesgos deben gestionarse cuidadosamente. Cada iteración (o espiral) incluye las siguientes fases:</p>
+                <ul>
+                    <li><strong>Determinación de objetivos:</strong> Identificar metas, restricciones y alternativas.</li>
+                    <li><strong>Análisis de riesgos:</strong> Evaluar riesgos técnicos, financieros y operativos.</li>
+                    <li><strong>Desarrollo y prueba:</strong> Construir prototipos o versiones iniciales del software.</li>
+                    <li><strong>Revisión y planificación:</strong> Evaluar resultados y planificar la siguiente iteración.</li>
+                </ul>
+                <p style="line-height: 1.6;">Este modelo es ideal para sistemas críticos, como software médico o aeroespacial, donde la mitigación de riesgos es crucial. Por ejemplo, en el desarrollo de un sistema de control de tráfico aéreo, el modelo espiral permite probar prototipos en cada iteración para garantizar seguridad y funcionalidad.</p>
+                <h4>Ejemplo de Aplicación del Modelo Espiral</h4>
+                <p style="line-height: 1.6;">Imagina un proyecto para desarrollar una aplicación de banca en línea:</p>
+                <ul>
+                    <li><strong>Iteración 1:</strong> Diseñar un prototipo de autenticación de usuarios, evaluando riesgos de seguridad.</li>
+                    <li><strong>Iteración 2:</strong> Implementar transferencias bancarias, probando la integridad de las transacciones.</li>
+                    <li><strong>Iteración 3:</strong> Agregar funciones de notificación, ajustando según retroalimentación.</li>
+                </ul>
+                <p style="line-height: 1.6;">Cada iteración reduce riesgos y mejora el producto, culminando en una versión final robusta.</p>
+
+                <h3>Modelo Entidad-Relación</h3>
+                <p style="line-height: 1.6;">El modelo entidad-relación (ER) es una herramienta para diseñar bases de datos relacionales, representando gráficamente las entidades, sus atributos y las relaciones entre ellas. Es fundamental para estructurar datos de manera lógica y eficiente.</p>
+                <ul>
+                    <li><strong>Entidades:</strong> Objetos del mundo real (por ejemplo, "Estudiante", "Curso").</li>
+                    <li><strong>Atributos:</strong> Propiedades de las entidades (por ejemplo, "Nombre" o "ID_Estudiante").</li>
+                    <li><strong>Relaciones:</strong> Conexiones entre entidades (por ejemplo, "Estudiante se inscribe en Curso").</li>
+                </ul>
+                <p style="line-height: 1.6;">Un diagrama ER visualiza la estructura de una base de datos antes de su implementación. Por ejemplo, en un sistema de gestión escolar, las entidades principales serían "Estudiante", "Curso" y "Profesor", con relaciones como "impartido por" o "inscrito en".</p>
+                <h4>Ejemplo de Diagrama ER</h4>
+                <p style="line-height: 1.6;">Un sistema escolar simple podría incluir:</p>
+                <ul>
+                    <li><strong>Estudiante:</strong> (ID_Estudiante, Nombre, Email)</li>
+                    <li><strong>Curso:</strong> (ID_Curso, Nombre, Créditos)</li>
+                    <li><strong>Profesor:</strong> (ID_Profesor, Nombre, Departamento)</li>
+                </ul>
+                <p style="line-height: 1.6;">Relaciones: Un profesor imparte varios cursos (1:N), y un estudiante se inscribe en varios cursos (M:N). Herramientas como Lucidchart o MySQL Workbench facilitan la creación de diagramas ER.</p>
+            </div>
+
+            <div class="section" id="segundo">
+                <h2>Segundo Parcial</h2>
+                <h3>Entidad-Relación Avanzado</h3>
+                <p style="line-height: 1.6;">El modelo entidad-relación avanzado extiende los conceptos básicos con elementos como entidades débiles, claves foráneas, y relaciones más complejas. Se enfoca en modelar sistemas con dependencias y restricciones específicas.</p>
+                <ul>
+                    <li><strong>Entidades débiles:</strong> Entidades que no tienen clave primaria propia y dependen de otra entidad (por ejemplo, "Préstamo" depende de "Libro").</li>
+                    <li><strong>Claves foráneas:</strong> Atributos que vinculan tablas en una base de datos relacional.</li>
+                    <li><strong>Relaciones ternarias:</strong> Conexiones que involucran tres entidades, como un estudiante inscrito en un curso con un profesor específico.</li>
+                </ul>
+                <p style="line-height: 1.6;">Por ejemplo, en un sistema de biblioteca, una entidad débil "Préstamo" podría depender de "Libro" y "Usuario", con atributos como fecha de préstamo y devolución.</p>
+                <h4>Ejemplo Avanzado de Diagrama ER</h4>
+                <p style="line-height: 1.6;">Un sistema de biblioteca avanzado incluye:</p>
+                <ul>
+                    <li><strong>Libro:</strong> (ID_Libro, Título, ISBN, Año_Publicación)</li>
+                    <li><strong>Autor:</strong> (ID_Autor, Nombre, Nacionalidad)</li>
+                    <li><strong>Usuario:</strong> (ID_Usuario, Nombre, Email, Teléfono)</li>
+                    <li><strong>Préstamo:</strong> (ID_Libro, ID_Usuario, Fecha_Préstamo, Fecha_Devolución)</li>
+                </ul>
+                <p style="line-height: 1.6;">Relaciones: Un autor escribe varios libros (1:N), un libro puede ser prestado a varios usuarios (1:N), y "Préstamo" es una entidad débil que depende de "Libro" y "Usuario".</p>
+
+                <h3>Cardinalidad</h3>
+                <p style="line-height: 1.6;">La cardinalidad define el número de instancias de una entidad que pueden relacionarse con otra en un modelo ER. Es esencial para diseñar bases de datos precisas y garantizar la integridad de los datos.</p>
+                <ul>
+                    <li><strong>Uno a uno (1:1):</strong> Una instancia de una entidad se relaciona con exactamente una instancia de otra (por ejemplo, un estudiante tiene un único número de identificación).</li>
+                    <li><strong>Uno a muchos (1:N):</strong> Una instancia de una entidad se relaciona con varias instancias de otra (por ejemplo, un autor escribe varios libros).</li>
+                    <li><strong>Muchos a muchos (M:N):</strong> Varias instancias de una entidad se relacionan con varias instancias de otra (por ejemplo, estudiantes inscritos en múltiples cursos).</li>
+                </ul>
+                <p style="line-height: 1.6;">La cardinalidad se representa en diagramas ER con notaciones como líneas, flechas o números. Por ejemplo, en un sistema escolar, la relación "Estudiante-Curso" es M:N, requiriendo una tabla intermedia para gestionar las inscripciones.</p>
+                <h4>Ejemplo de Cardinalidad en SQL</h4>
+                <p style="line-height: 1.6;">Para modelar una relación M:N entre "Estudiante" y "Curso":</p>
+                <pre>
+CREATE TABLE Estudiante (
+    ID_Estudiante INT PRIMARY KEY,
+    Nombre VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+CREATE TABLE Curso (
+    ID_Curso INT PRIMARY KEY,
+    Nombre VARCHAR(100),
+    Créditos INT
+);
+
+CREATE TABLE Inscripcion (
+    ID_Estudiante INT,
+    ID_Curso INT,
+    Fecha_Inscripcion DATE,
+    PRIMARY KEY (ID_Estudiante, ID_Curso),
+    FOREIGN KEY (ID_Estudiante) REFERENCES Estudiante(ID_Estudiante),
+    FOREIGN KEY (ID_Curso) REFERENCES Curso(ID_Curso)
+);
+                </pre>
+                <p style="line-height: 1.6;">La tabla <code>Inscripcion</code> maneja la relación M:N, permitiendo que un estudiante se inscriba en múltiples cursos y un curso tenga múltiples estudiantes.</p>
+            </div>
+
+            <div class="section" id="tercer">
+                <h2>Tercer Parcial</h2>
+                <h3>Conexión a Java con MySQL</h3>
+                <p style="line-height: 1.6;">Java permite conectar aplicaciones con bases de datos MySQL utilizando JDBC (Java Database Connectivity), una API que facilita la ejecución de consultas SQL desde código Java. Esto es esencial para aplicaciones dinámicas que requieren almacenamiento y recuperación de datos.</p>
+                <ul>
+                    <li><strong>Driver JDBC:</strong> Biblioteca que actúa como puente entre Java y MySQL (por ejemplo, Connector/J).</li>
+                    <li><strong>Conexión:</strong> Establecer una conexión con la base de datos usando una URL, usuario y contraseña.</li>
+                    <li><strong>Consultas:</strong> Ejecutar operaciones CRUD mediante sentencias SQL.</li>
+                </ul>
+                <p style="line-height: 1.6;">Por ejemplo, una aplicación de gestión de biblioteca puede usar Java para consultar libros disponibles o registrar préstamos en una base de datos MySQL.</p>
+                <h4>Ejemplo de Conexión Java-MySQL</h4>
+                <p style="line-height: 1.6;">Este código conecta a una base de datos MySQL y recupera todos los libros:</p>
+                <pre>
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class ConexionMySQL {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/biblioteca";
+        String usuario = "root";
+        String contraseña = "password";
+
+        try {
+            // Cargar el driver JDBC
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establecer conexión
+            Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
+
+            // Crear una consulta
+            Statement stmt = conexion.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT Título, Año_Publicación FROM Libros");
+
+            // Procesar resultados
+            while (rs.next()) {
+                System.out.println("Título: " + rs.getString("Título") + ", Año: " + rs.getInt("Año_Publicación"));
+            }
+
+            // Cerrar conexión
+            rs.close();
+            stmt.close();
+            conexion.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                </pre>
+                <p style="line-height: 1.6;">Este ejemplo asume una base de datos "biblioteca" con una tabla "Libros". Requiere el driver MySQL Connector/J en el proyecto.</p>
+
+                <h3>Uso de Base de Datos</h3>
+                <p style="line-height: 1.6;">El uso de bases de datos en aplicaciones implica diseñar, consultar y gestionar datos de manera eficiente. En el contexto de OOP, las bases de datos relacionales como MySQL se integran con objetos Java para modelar datos del mundo real.</p>
+                <ul>
+                    <li><strong>CRUD:</strong> Crear, leer, actualizar y eliminar registros.</li>
+                    <li><strong>Normalización:</strong> Organizar datos para evitar redundancias.</li>
+                    <li><strong>ORM (Object-Relational Mapping):</strong> Herramientas como Hibernate mapean objetos Java a tablas de bases de datos.</li>
+                </ul>
+                <p style="line-height: 1.6;">Por ejemplo, en una aplicación de gestión de inventario, se pueden usar consultas SQL para rastrear productos y clases Java para modelar objetos como "Producto" o "Categoría".</p>
+                <h4>Ejemplo de Operación CRUD en Java</h4>
+                <p style="line-height: 1.6;">Insertar un nuevo libro en la base de datos:</p>
+                <pre>
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class InsertarLibro {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/biblioteca";
+        String usuario = "root";
+        String contraseña = "password";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
+
+            String sql = "INSERT INTO Libros (Título, ISBN, Año_Publicación) VALUES (?, ?, ?)";
+            PreparedStatement stmt = conexion.prepareStatement(sql);
+            stmt.setString(1, "Cien Años de Soledad");
+            stmt.setString(2, "978-3-16-148410-0");
+            stmt.setInt(3, 1967);
+
+            int filasAfectadas = stmt.executeUpdate();
+            System.out.println("Filas insertadas: " + filasAfectadas);
+
+            stmt.close();
+            conexion.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                </pre>
+                <p style="line-height: 1.6;">Este ejemplo usa <code>PreparedStatement</code> para insertar datos de forma segura, evitando inyecciones SQL.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Programación. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

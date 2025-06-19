@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gráfica en Plano Cartesiano</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+  body {
+    font-family: 'Roboto Mono', monospace;
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+  }
+  h1 {
+    margin-bottom: 12px;
+    color: #0277bd;
+  }
+  form {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgb(2 119 189 / 0.2);
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 380px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .inputs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  input[type="number"] {
+    width: 60px;
+    padding: 8px 6px;
+    font-size: 16px;
+    border: 2px solid #0277bd;
+    border-radius: 6px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+  }
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #01579b;
+  }
+  button {
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #01579b;
+  }
+  canvas {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 0.10);
+  }
+</style>
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='../../comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='../../ecologia.html'">Ecologia</button>
+                <button onclick="location.href='../../humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='../../matematicas.html'">Matematicas</button>
+                <button onclick="location.href='../../orientacion.html'">Orientación</button>
+                <button onclick="location.href='../../poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='../../poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='../../recursos.html'">Recursos</button>
+                <button onclick="location.href='../../index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='../adlae/index.html'">Verbos</button>
+                <button onclick="location.href='../grafica/index.html'">Grafica</button>
+                <button onclick="location.href='../i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='../syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='../sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+  <h1>Gráfica en Plano Cartesiano</h1>
+  <form id="inputForm">
+    <div class="inputs-container">
+      <div>
+        <label for="val1">Valor 1</label>
+        <input type="number" id="val1" required />
+      </div>
+      <div>
+        <label for="val2">Valor 2</label>
+        <input type="number" id="val2" required />
+      </div>
+      <div>
+        <label for="val3">Valor 3</label>
+        <input type="number" id="val3" required />
+      </div>
+      <div>
+        <label for="val4">Valor 4</label>
+        <input type="number" id="val4" required />
+      </div>
+      <div>
+        <label for="val5">Valor 5</label>
+        <input type="number" id="val5" required />
+      </div>
+      <div>
+        <label for="val6">Valor 6</label>
+        <input type="number" id="val6" required />
+      </div>
+      <div>
+        <label for="val7">Valor 7</label>
+        <input type="number" id="val7" required />
+      </div>
+      <div>
+        <label for="val8">Valor 8</label>
+        <input type="number" id="val8" required />
+      </div>
+      <div>
+        <label for="val9">Valor 9</label>
+        <input type="number" id="val9" required />
+      </div>
+      <div>
+        <label for="val10">Valor 10</label>
+        <input type="number" id="val10" required />
+      </div>
+    </div>
+    <button type="submit">Graficar</button>
+  </form>
+  <canvas id="graficaCanvas" width="600" height="400" aria-label="Gráfica en plano cartesiano"></canvas>
+  
+<script>
+  const form = document.getElementById('inputForm');
+  const canvas = document.getElementById('graficaCanvas');
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width;
+  const height = canvas.height;
+  const padding = 50;
+
+  // Función para dibujar ejes cartesianos
+  function dibujarEjes() {
+    ctx.clearRect(0, 0, width, height);
+
+    ctx.strokeStyle = '#0277bd';
+    ctx.lineWidth = 2;
+
+    // Eje X
+    ctx.beginPath();
+    ctx.moveTo(padding, height - padding);
+    ctx.lineTo(width - padding, height - padding);
+    ctx.stroke();
+
+    // Flecha eje X
+    ctx.beginPath();
+    ctx.moveTo(width - padding - 10, height - padding - 7);
+    ctx.lineTo(width - padding, height - padding);
+    ctx.lineTo(width - padding - 10, height - padding + 7);
+    ctx.stroke();
+
+    // Eje Y
+    ctx.beginPath();
+    ctx.moveTo(padding, height - padding);
+    ctx.lineTo(padding, padding);
+    ctx.stroke();
+
+    // Flecha eje Y
+    ctx.beginPath();
+    ctx.moveTo(padding - 7, padding + 10);
+    ctx.lineTo(padding, padding);
+    ctx.lineTo(padding + 7, padding + 10);
+    ctx.stroke();
+
+    // Etiquetas ejes X e Y
+    ctx.fillStyle = '#0277bd';
+    ctx.font = '16px monospace';
+    ctx.fillText('0', padding - 15, height - padding + 18);
+    ctx.fillText('x', width - padding + 15, height - padding + 5);
+    ctx.fillText('y', padding - 15, padding - 15);
+
+    // Líneas auxiliares (marcas)
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#bbb';
+
+    // Marcas eje X
+    const intervalX = (width - 2 * padding) / 10;
+    for(let i=1; i<=10; i++) {
+      let x = padding + i * intervalX;
+      ctx.beginPath();
+      ctx.moveTo(x, height - padding - 5);
+      ctx.lineTo(x, height - padding + 5);
+      ctx.stroke();
+
+      ctx.fillStyle = '#444';
+      ctx.font = '12px monospace';
+      ctx.fillText(i, x - 3, height - padding + 20);
+    }
+
+    // Marcas eje Y
+    const intervalY = (height - 2 * padding) / 10;
+    for(let j=1; j<=10; j++) {
+      let y = height - padding - j * intervalY;
+      ctx.beginPath();
+      ctx.moveTo(padding - 5, y);
+      ctx.lineTo(padding + 5, y);
+      ctx.stroke();
+
+      ctx.fillStyle = '#444';
+      ctx.font = '12px monospace';
+      ctx.fillText(j, padding - 25, y + 4);
+    }
+  }
+
+  // Función para graficar los puntos y líneas
+  function graficar(valores) {
+    dibujarEjes();
+
+    // Valores en Y, x será 1 a 10
+    // Normalizar valores Y para encajar en el gráfico
+
+    const maxVal = Math.max(...valores);
+    const minVal = Math.min(...valores);
+    // Evitar división entre 0
+    const rango = maxVal - minVal || 1;
+
+    // Coord marco eje Y desde padding hasta height-padding
+    // Mapeamos valores para que maxVal esté en padding y minVal en height - padding
+
+    const escalaY = (val) => height - padding - ((val - minVal) * (height - 2 * padding)) / rango;
+    const escalaX = (i) => padding + ((i - 1) * (width - 2 * padding)) / 9; // 10 valores X=1..10
+
+    ctx.strokeStyle = '#01579b';
+    ctx.lineWidth = 3;
+    ctx.fillStyle = '#0288d1';
+
+    ctx.beginPath();
+    for(let i=0; i<valores.length; i++){
+      const x = escalaX(i+1);
+      const y = escalaY(valores[i]);
+      if(i === 0){
+        ctx.moveTo(x, y);
+      } else{
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.stroke();
+
+    // Dibujar puntos
+    for(let i=0; i<valores.length; i++){
+      const x = escalaX(i+1);
+      const y = escalaY(valores[i]);
+      ctx.beginPath();
+      ctx.arc(x, y, 6, 0, 2 * Math.PI);
+      ctx.fill();
+      // Etiqueta del valor encima
+      ctx.fillStyle = '#004c6d';
+      ctx.font = 'bold 14px monospace';
+      ctx.fillText(valores[i], x - 10, y - 12);
+      ctx.fillStyle = '#0288d1';
+    }
+  }
+
+  // Manejar el submit del formulario
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const valores = [];
+    for(let i=1; i<=10; i++){
+      const input = document.getElementById('val'+i);
+      const val = Number(input.value);
+      if(isNaN(val)){
+        alert(`Por favor ingresa un número válido para el valor ${i}`);
+        return;
+      }
+      valores.push(val);
+    }
+    graficar(valores);
+  });
+
+  // Dibuja ejes inicialmente sin puntos
+  dibujarEjes();
+
+</script>
+</body>
+</html>
+

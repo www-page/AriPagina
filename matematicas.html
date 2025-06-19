@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas</title>
+    <link rel="stylesheet" href="estilos/matematicas.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Matemáticas</h1>
+        <p>Un curso para desarrollar habilidades en álgebra, geometría y estadística en el segundo año de bachillerato.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block;">
+                <h2>Primer Parcial</h2>
+                <h3>1. Ecuaciones Lineales</h3>
+                <p>Las ecuaciones lineales representan relaciones lineales entre variables. Se resuelven usando operaciones inversas.</p>
+                <h4>Ejemplo: Resolución</h4>
+                <pre>
+2x + 3 = 7
+2x = 7 - 3
+2x = 4
+x = 2
+                </pre>
+
+                <h3>2. Sistemas de Ecuaciones</h3>
+                <p>Los sistemas de ecuaciones resuelven múltiples ecuaciones simultáneamente, usando métodos como sustitución o eliminación.</p>
+                <h4>Ejemplo: Sustitución</h4>
+                <pre>
+x + y = 5
+2x - y = 1
+Solución: x = 2, y = 3
+                </pre>
+
+                <h3>3. Factorización</h3>
+                <p>La factorización descompone expresiones algebraicas en factores, como diferencia de cuadrados o trinomios.</p>
+                <h4>Ejemplo: Factorización</h4>
+                <pre>
+x² - 4 = (x - 2)(x + 2)
+                </pre>
+
+                <h3>4. Funciones Lineales</h3>
+                <p>Las funciones lineales tienen la forma y = mx + b, donde m es la pendiente y b el intercepto.</p>
+                <h4>Ejemplo: Gráfica</h4>
+                <p>Gráfica y = 2x + 1. Identifica la pendiente (2) y el intercepto (1).</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none;">
+                <h2>Segundo Parcial</h2>
+                <h3>1. Ecuaciones Cuadráticas</h3>
+                <p>Las ecuaciones cuadráticas (ax² + bx + c = 0) se resuelven por factorización, fórmula general o completando el cuadrado.</p>
+                <h4>Ejemplo: Fórmula General</h4>
+                <pre>
+x² + 2x - 3 = 0
+x = [-b ± √(b² - 4ac)] / 2a
+x = [-2 ± √(4 + 12)] / 2
+x = [-2 ± 4] / 2
+x = 1, -3
+                </pre>
+
+                <h3>2. Geometría Plana</h3>
+                <p>Estudio de figuras como triángulos, círculos y polígonos, y sus propiedades (área, perímetro).</p>
+                <h4>Ejemplo: Área de un Triángulo</h4>
+                <p>Base = 6 cm, altura = 4 cm. Área = (base × altura) / 2 = 12 cm².</p>
+
+                <h3>3. Trigonometría Básica</h3>
+                <p>Introducción a seno, coseno y tangente en triángulos rectángulos.</p>
+                <h4>Ejemplo: Seno</h4>
+                <p>En un triángulo rectángulo, seno A = opuesto / hipotenusa. Calcula seno A si opuesto = 3, hipotenusa = 5.</p>
+
+                <h3>4. Estadística Descriptiva</h3>
+                <p>La estadística descriptiva organiza datos mediante media, mediana, moda y gráficos.</p>
+                <h4>Ejemplo: Media</h4>
+                <p>Datos: 2, 4, 6, 8. Media = (2 + 4 + 6 + 8) / 4 = 5.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none;">
+                <h2>Tercer Parcial</h2>
+                <h3>1. Funciones Cuadráticas</h3>
+                <p>Las funciones cuadráticas (y = ax² + bx + c) tienen gráficas en forma de parábola.</p>
+                <h4>Ejemplo: Vértice</h4>
+                <p>Para y = x² + 2x + 1, el vértice es x = -b/2a = -2/2 = -1.</p>
+
+                <h3>2. Geometría Analítica</h3>
+                <p>Estudio de figuras geométricas usando coordenadas, como la ecuación de una recta o una circunferencia.</p>
+                <h4>Ejemplo: Ecuación de la Recta</h4>
+                <p>Puntos (1,2) y (3,6). Pendiente = (6-2)/(3-1) = 2. Ecuación: y = 2x.</p>
+
+                <h3>3. Probabilidad</h3>
+                <p>La probabilidad mide la posibilidad de que ocurra un evento, usando fracciones o porcentajes.</p>
+                <h4>Ejemplo: Probabilidad</h4>
+                <p>En una bolsa con 3 bolas rojas y 2 azules, P(roja) = 3/5.</p>
+
+                <h3>4. Sucesiones</h3>
+                <p>Las sucesiones son secuencias de números con un patrón, como aritméticas o geométricas.</p>
+                <h4>Ejemplo: Sucesión Aritmética</h4>
+                <p>2, 5, 8, 11. Diferencia = 3. Término n = 2 + (n-1)·3.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Matemáticas. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html>

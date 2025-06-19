@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sopa de Letras - Programación Orientada a Objetos</title>
+<link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='../../comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='../../ecologia.html'">Ecologia</button>
+                <button onclick="location.href='../../humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='../../matematicas.html'">Matematicas</button>
+                <button onclick="location.href='../../orientacion.html'">Orientación</button>
+                <button onclick="location.href='../../poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='../../poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='../../recursos.html'">Recursos</button>
+                <button onclick="location.href='../../index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='../adlae/index.html'">Verbos</button>
+                <button onclick="location.href='../grafica/index.html'">Grafica</button>
+                <button onclick="location.href='../i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='../syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='../sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+  <h1>Sopa de Letras</h1>
+  <h2>Programación Orientada a Objetos</h2>
+  <p id="instructions">Selecciona las palabras relacionadas con POO arrastrando sobre las letras.</p>
+  <div class="container">
+    <div id="board-container">
+      <div id="board"></div>
+    </div>
+    <div id="word-list">
+      <h3>Palabras a encontrar</h3>
+      <ul id="words"></ul>
+    </div>
+  </div>
+
+<script src="estilos/script.js">
+</script>
+</body>
+</html>

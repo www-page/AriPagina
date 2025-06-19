@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Orientada a Objetos</title>
+    <link rel="stylesheet" href="estilos/poe.css">
+</head>
+<body>
+    <link rel="stylesheet" href="estilos/menu.css">
+    <div class="menuSuperior">
+        <button class="menuToggle">▤</button>
+        <div class="botonesMenuPadre" id="mainMenu">
+            <button class="menuButton">Materias</button>
+            <div class="materias submenu" id="materiasMenu">
+                <button onclick="location.href='comunicacion.html'">Comunicación</button>
+                <button onclick="location.href='ecologia.html'">Ecologia</button>
+                <button onclick="location.href='humanidades.html'">Humanidades</button>
+                <button onclick="location.href='ingles.html'">Ingles</button>
+                <button onclick="location.href='matematicas.html'">Matematicas</button>
+                <button onclick="location.href='orientacion.html'">Orientación</button>
+                <button onclick="location.href='poe.html'">P.O. Eventos</button>
+                <button onclick="location.href='poo.html'">P.O. Objetos</button>
+                <button onclick="location.href='recursos.html'">Recursos</button>
+                <button onclick="location.href='index.html'">Inicio</button>
+            </div>
+            <button class="menuButton">Dinamicas</button>
+            <div class="dinamicas submenu" id="dinamicasMenu">
+                <button onclick="location.href='dinamicas/adlae/imdex.html'">Verbos</button>
+                <button onclick="location.href='dinamicas/grafica/index.html'">Grafica</button>
+                <button onclick="location.href='dinamicas/i2cruci/index.html'">Encode</button>
+                <button onclick="location.href='dinamicas/syes/index.html'">Snakes & stairs</button>
+                <button onclick="location.href='dinamicas/sopaletraspoo/index.html'">Sopa de letras</button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Programación Orientada a Objetos</h1>
+        <p>Un curso introductorio sobre los fundamentos de la programación orientada a objetos y sus aplicaciones prácticas.</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="mostrarParcial('primer')" class="sidebar-btn active">Primer Parcial</button>
+            <button onclick="mostrarParcial('segundo')" class="sidebar-btn">Segundo Parcial</button>
+            <button onclick="mostrarParcial('tercer')" class="sidebar-btn">Tercer Parcial</button>
+        </aside>
+
+        <main class="content">
+            <div class="section" id="primer" style="display: block; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+                <h2 style="color: #4A90E2;">Primer Parcial</h2>
+                <h3 style="color: #333;">Inteligencia Artificial</h3>
+                <p style="line-height: 1.6;">La inteligencia artificial (IA) es una disciplina que busca desarrollar sistemas capaces de imitar la inteligencia humana, como el aprendizaje, la resolución de problemas y la toma de decisiones. Este tema cubre los fundamentos de IA, incluyendo:</p>
+                <ul>
+                    <li><strong>Aprendizaje automático (Machine Learning):</strong> Algoritmos que permiten a las máquinas aprender de datos, como regresión lineal, árboles de decisión y redes neuronales.</li>
+                    <li><strong>Redes neuronales:</strong> Modelos computacionales inspirados en el cerebro humano, utilizados en aplicaciones como el reconocimiento de imágenes y el procesamiento del lenguaje natural.</li>
+                    <li><strong>Algoritmos de búsqueda:</strong> Como A* o búsqueda en profundidad, que se utilizan en sistemas expertos y juegos.</li>
+                </ul>
+                <p style="line-height: 1.6;">Las aplicaciones de la IA son vastas: en medicina, se utilizan para diagnosticar enfermedades; en automoción, para vehículos autónomos; y en entretenimiento, para sistemas de recomendación como los de Netflix o Spotify. Por ejemplo, los algoritmos de recomendación analizan patrones de consumo para sugerir contenido personalizado.</p>
+                <h4 style="color: #555;">Ejemplo de Algoritmo: Regresión Lineal</h4>
+                <p style="line-height: 1.6;">La regresión lineal es un algoritmo de aprendizaje supervisado que modela la relación entre una variable dependiente (por ejemplo, el precio de una casa) y una o más variables independientes (como el tamaño o la ubicación). Un ejemplo práctico:</p>
+                <pre style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #ccc;">
+# Pseudocódigo para regresión lineal
+Entradas: tamaño_casa (m²), precio_casa (USD)
+Modelo: precio = a * tamaño + b
+Entrenar modelo con datos históricos
+Predecir precio para un tamaño dado
+                </pre>
+                <p style="line-height: 1.6;">En Python, se implementaría usando bibliotecas como scikit-learn:</p>
+                <pre style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #ccc;">
+from sklearn.linear_model import LinearRegression
+modelo = LinearRegression()
+modelo.fit(tamaño_casa, precio_casa)
+precio_predicho = modelo.predict(nuevo_tamaño)
+                </pre>
+
+                <h3 style="color: #333;">Modelo Ágil</h3>
+                <p style="line-height: 1.6;">El desarrollo ágil es un enfoque iterativo e incremental para el desarrollo de software, que prioriza la flexibilidad, la colaboración y la entrega continua de valor al cliente. Las metodologías más comunes son:</p>
+                <ul>
+                    <li><strong>Scrum:</strong> Organiza el trabajo en sprints (iteraciones de 1-4 semanas) con roles definidos (Product Owner, Scrum Master, equipo de desarrollo) y ceremonias como reuniones diarias (Daily Scrum) y revisiones de sprint.</li>
+                    <li><strong>Kanban:</strong> Utiliza tableros visuales para gestionar el flujo de trabajo, limitando el trabajo en curso para mejorar la eficiencia.</li>
+                </ul>
+                <p style="line-height: 1.6;">Las ventajas incluyen una mayor adaptabilidad a los cambios, una mejor comunicación en el equipo y entregas más rápidas. Por ejemplo, en un proyecto de desarrollo de una aplicación móvil, el equipo puede ajustar las funcionalidades según retroalimentación del usuario tras cada sprint.</p>
+                <h4 style="color: #555;">Ejemplo de Tablero Kanban</h4>
+                <p style="line-height: 1.6;">Un tablero Kanban típico tiene columnas como:</p>
+                <ul>
+                    <li><strong>Por hacer:</strong> Tareas pendientes.</li>
+                    <li><strong>En progreso:</strong> Tareas en curso.</li>
+                    <li><strong>Completado:</strong> Tareas terminadas.</li>
+                </ul>
+                <p style="line-height: 1.6;">Herramientas como Trello o Jira facilitan la implementación de Kanban en equipos remotos.</p>
+            </div>
+
+            <div class="section" id="segundo" style="display: none; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+                <h2 style="color: #4A90E2;">Segundo Parcial</h2>
+                <h3 style="color: #333;">Modelo Entidad-Relación</h3>
+                <p style="line-height: 1.6;">El modelo entidad-relación (ER) es una herramienta para diseñar bases de datos relacionales, representando gráficamente las entidades, sus atributos y las relaciones entre ellas. Es fundamental para estructurar datos de manera lógica y eficiente.</p>
+                <ul>
+                    <li><strong>Entidades:</strong> Objetos del mundo real (por ejemplo, "Libro", "Autor").</li>
+                    <li><strong>Atributos:</strong> Propiedades de las entidades (por ejemplo, "Título" o "ID").</li>
+                    <li><strong>Relaciones:</strong> Conexiones entre entidades (por ejemplo, "Autor escribe Libro").</li>
+                </ul>
+                <p style="line-height: 1.6;">Un diagrama ER ayuda a visualizar la estructura de una base de datos antes de implementarla. Por ejemplo, en un sistema de gestión de biblioteca, las entidades principales serían "Libro", "Autor" y "Usuario", con relaciones como "escrito por" o "prestado a".</p>
+                <h4 style="color: #555;">Ejemplo Avanzado de Diagrama ER</h4>
+                <p style="line-height: 1.6;">Consideremos un sistema de biblioteca más complejo:</p>
+                <ul>
+                    <li><strong>Libro:</strong> (ID_Libro, Título, ISBN, Año_Publicación, AutorID)</li>
+                    <li><strong>Autor:</strong> (ID_Autor, Nombre, Nacionalidad)</li>
+                    <li><strong>Usuario:</strong> (ID_Usuario, Nombre, Email, Teléfono)</li>
+                    <li><strong>Préstamo:</strong> (ID_Préstamo, ID_Libro, ID_Usuario, Fecha_Préstamo, Fecha_Devolución)</li>
+                </ul>
+                <p style="line-height: 1.6;">Relaciones: Un autor puede escribir varios libros (1:N), un libro puede ser prestado a varios usuarios a lo largo del tiempo (1:N), y un usuario puede tener múltiples préstamos (1:N).</p>
+                <p style="line-height: 1.6;">Un diagrama ER se puede crear usando herramientas como MySQL Workbench o Lucidchart.</p>
+
+                <h3 style="color: #333;">Bases de Datos</h3>
+                <p style="line-height: 1.6;">Las bases de datos relacionales organizan datos en tablas relacionadas mediante claves primarias y foráneas. SQL (Structured Query Language) es el estándar para interactuar con estas bases de datos, permitiendo operaciones como:</p>
+                <ul>
+                    <li><strong>CRUD:</strong> Crear (INSERT), Leer (SELECT), Actualizar (UPDATE), Eliminar (DELETE).</li>
+                    <li><strong>Normalización:</strong> Proceso para eliminar redundancias y garantizar la integridad de los datos.</li>
+                    <li><strong>Consultas avanzadas:</strong> Uso de JOIN, GROUP BY y subconsultas.</li>
+                </ul>
+                <p style="line-height: 1.6;">Por ejemplo, en una base de datos de biblioteca, se puede usar SQL para consultar los libros prestados por un usuario específico.</p>
+                <h4 style="color: #555;">Ejemplo de Consulta SQL Compleja</h4>
+                <p style="line-height: 1.6;">Para obtener los libros prestados por un usuario, incluyendo el nombre del autor:</p>
+                <pre style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #ccc;">
+SELECT L.Título, A.Nombre, P.Fecha_Préstamo
+FROM Libros L
+JOIN Préstamos P ON L.ID_Libro = P.ID_Libro
+JOIN Autores A ON L.AutorID = A.ID_Autor
+WHERE P.ID_Usuario = 1;
+                </pre>
+                <p style="line-height: 1.6;">Esta consulta combina tres tablas para obtener información detallada, demostrando el poder de las uniones (JOIN) en SQL.</p>
+            </div>
+
+            <div class="section" id="tercer" style="display: none; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+                <h2 style="color: #4A90E2;">Tercer Parcial</h2>
+                <h3 style="color: #333;">Java</h3>
+                <p style="line-height: 1.6;">Java es un lenguaje de programación orientado a objetos, robusto, portable y ampliamente utilizado en aplicaciones empresariales, móviles (Android) y web. Los conceptos clave de OOP en Java incluyen:</p>
+                <ul>
+                    <li><strong>Clases y objetos:</strong> Una clase es una plantilla; un objeto es una instancia de esa plantilla.</li>
+                    <li><strong>Herencia:</strong> Permite que una clase herede atributos y métodos de otra.</li>
+                    <li><strong>Polimorfismo:</strong> Permite que un mismo método se comporte de manera diferente según el objeto.</li>
+                    <li><strong>Encapsulación:</strong> Oculta los detalles internos de un objeto, exponiendo solo lo necesario.</li>
+                </ul>
+                <p style="line-height: 1.6;">Java es ideal para proyectos grandes debido a su tipado fuerte y su gestión automática de memoria (Garbage Collection).</p>
+                <h4 style="color: #555;">Ejemplo de Herencia en Java</h4>
+                <pre style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #ccc;">
+public class Persona {
+    protected String nombre;
+    protected int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre + ", Edad: " + edad);
+    }
+}
+
+public class Estudiante extends Persona {
+    private String matricula;
+
+    public Estudiante(String nombre, int edad, String matricula) {
+        super(nombre, edad);
+        this.matricula = matricula;
+    }
+
+    @Override
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Matrícula: " + matricula);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante estudiante = new Estudiante("Ana", 20, "12345");
+        estudiante.mostrarInfo();
+    }
+}
+                </pre>
+                <p style="line-height: 1.6;">Este ejemplo muestra herencia y polimorfismo, donde la clase <code>Estudiante</code> extiende <code>Persona</code> y sobrescribe el método <code>mostrarInfo</code>.</p>
+
+                <h3 style="color: #333;">Visual Basic</h3>
+                <p style="line-height: 1.6;">Visual Basic (VB) es un lenguaje orientado a eventos, ideal para desarrollar aplicaciones de escritorio con interfaces gráficas (GUI). Utiliza un entorno de desarrollo integrado como Visual Studio, donde los programadores pueden diseñar formularios y asociar eventos a controles.</p>
+                <ul>
+                    <li><strong>Controles:</strong> Botones, etiquetas, cuadros de texto, etc.</li>
+                    <li><strong>Eventos:</strong> Acciones del usuario, como clics o cambios en un cuadro de texto.</li>
+                    <li><strong>Propiedades:</strong> Configuraciones de los controles, como el texto o el color.</li>
+                </ul>
+                <p style="line-height: 1.6;">VB es ideal para prototipos rápidos y aplicaciones empresariales simples, como sistemas de inventario o formularios de entrada de datos.</p>
+                <h4 style="color: #555;">Ejemplo de Aplicación en Visual Basic</h4>
+                <p style="line-height: 1.6;">Un formulario con un cuadro de texto y un botón para saludar al usuario:</p>
+                <div class="codevb" style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #ccc;">
+                    Public Class Form1<br>
+                      Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click<br>
+                        Dim nombre As String = TextBox1.Text<br>
+                        MessageBox.Show("¡Hola, " & nombre & "!")<br>
+                      End Sub<br>
+                    End Class
+                </div>
+                <p style="line-height: 1.6;">En este ejemplo, el evento <code>Button1_Click</code> se dispara al hacer clic en el botón, mostrando un mensaje personalizado basado en el texto ingresado.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Temario de Programación. Desarrollado por Ariadna.</p>
+    </footer>
+    <script src="parciales.js"></script>
+</body>
+</html> 
